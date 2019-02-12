@@ -3,27 +3,27 @@ package org.foobarspam.cotxox.tarifa;
 import org.foobarspam.cotxox.carrera.Carrera;
 
 public class Tarifa {
-        private static double costeMilla = 1.35;
-        private static double costeMinuto = 0.35;
-        private static double costeMinimo = 5.0;
-        private static double porcentajeComision = 0.2;
+        private final double COSTEMILLA = 1.35;
+        private final double COSTEMINUTO = 0.35;
+        private final double COSTEMINIMO = 5.0;
+        private final double PORCENTAJECOMISION = 0.2;
 
-        public static double getCosteDistancia(double distancia){
-            return costeMilla * distancia;
+        public  double getCosteDistancia(double distancia){
+            return COSTEMILLA * distancia;
         }
 
 
-        public static double getCosteTiempo(int tiempoEsperadoMinutos){
-            return costeMinuto * tiempoEsperadoMinutos;
+        public double getCosteTiempo(int tiempoEsperadoMinutos){
+            return COSTEMINUTO * tiempoEsperadoMinutos;
         }
 
         //Recordamos que hay que poner la clase carrera pero para comprobar que la clase funciona ponemos distancia y tiempo.
 
-        public static double getCosteTotalEsperado(Carrera carrera){
+        public double getCosteTotalEsperado(Carrera carrera){
             double total = getCosteDistancia(carrera.getDistancia()) + getCosteTiempo(carrera.getTiempoEsperado());
-            double comision = total * porcentajeComision;
-            if (total < costeMinimo){
-                return costeMinimo;
+            double comision = total * PORCENTAJECOMISION;
+            if (total < COSTEMINIMO){
+                return COSTEMINIMO;
             }else{
                 return total + comision;
             }

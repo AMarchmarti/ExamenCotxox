@@ -13,8 +13,8 @@ public class TarifaTest {
         double distancia = 7.75;
         double distanci = 10.2;
         double delta = 0.01;
-        Assert.assertEquals(10.4625, Tarifa.getCosteDistancia(distancia), delta);
-        Assert.assertEquals(13.77, Tarifa.getCosteDistancia(distanci), delta);
+        Assert.assertEquals(10.4625, tarifa.getCosteDistancia(distancia), delta);
+        Assert.assertEquals(13.77, tarifa.getCosteDistancia(distanci), delta);
     }
 
 
@@ -24,8 +24,8 @@ public class TarifaTest {
         int tiempo = 10;
         int temps = 15;
         double delta = 0.01;
-        Assert.assertEquals(3.5, Tarifa.getCosteTiempo(tiempo), delta);
-        Assert.assertEquals(5.25, Tarifa.getCosteTiempo(temps), delta);
+        Assert.assertEquals(3.5, tarifa.getCosteTiempo(tiempo), delta);
+        Assert.assertEquals(5.25, tarifa.getCosteTiempo(temps), delta);
     }
 
     @Test
