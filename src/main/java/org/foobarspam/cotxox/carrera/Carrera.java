@@ -12,6 +12,8 @@ public class Carrera {
     private String origen = null;
     private String destino = null;
     private String tarjetaCredito = null;
+    private int propina = 0;
+
 
 
     public Carrera(String tarjetaCredito){
@@ -38,6 +40,15 @@ public class Carrera {
     }
 
 
+    public void recibirPropina(int propina){
+        this.propina = propina;
+    }
+
+
+    public void realizarPago(double pago){
+        this.costeTotal = pago;
+    }
+
     /*--------------------------------Getters----------------------------------------*/
 
     public String getOrigen(){
@@ -59,11 +70,23 @@ public class Carrera {
         return this.tiempoEsperadoMinutos;
     }
 
+
     public String getTarjetaCredito(){
         return this.tarjetaCredito;
     }
 
+
     public Double getCosteEsperado(){
         return Tarifa.getCosteTotalEsperado(this);
+    }
+
+
+    public int getPropina(){
+        return this.propina;
+    }
+
+
+    public Double getCosteTotal(){
+        return this.costeTotal;
     }
 }

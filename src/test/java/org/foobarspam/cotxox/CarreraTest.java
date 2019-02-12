@@ -32,5 +32,22 @@ public class CarreraTest {
     }
 
 
+    @Test
+    public void getPropinaTest(){
+        String tarjeta = "4916119711304546";
+        Carrera carrera = new Carrera(tarjeta);
+        carrera.recibirPropina(5);
+        Assert.assertEquals(5, carrera.getPropina());
+    }
+
+
+    @Test
+    public void costeTotalTest(){
+        String tarjeta = "4916119711304546";
+        Carrera carrera = new Carrera(tarjeta);
+        carrera.realizarPago(10.25);
+        double delta = 0.01;
+        Assert.assertEquals(10.25, carrera.getCosteTotal(), delta);
+    }
 
 }
