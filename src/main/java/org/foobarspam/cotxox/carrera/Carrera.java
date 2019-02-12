@@ -94,8 +94,8 @@ public class Carrera {
 
 
     public Double getCosteEsperado(){
-        Tarifa tarifa = new Tarifa();
-        return tarifa.getCosteTotalEsperado(this);
+
+        return Tarifa.getCosteTotalEsperado(this);
     }
 
 
