@@ -2,7 +2,7 @@ package org.foobarspam.cotxox.conductores;
 
 import java.util.ArrayList;
 
-public class Conductores {
+public class Conductor {
 
         private String nombre = null;
         private String matricula = null;
@@ -11,7 +11,7 @@ public class Conductores {
         private ArrayList<Double> valoraciones = new ArrayList<>();
         private Boolean ocupado = false;
 
-        public Conductores(String nombre){
+        public Conductor(String nombre){
             this.nombre = nombre;
         }
 /*-------------------Setters---------------------------------------*/
