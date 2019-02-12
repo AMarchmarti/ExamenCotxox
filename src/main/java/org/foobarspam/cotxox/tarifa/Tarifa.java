@@ -1,5 +1,7 @@
 package org.foobarspam.cotxox.tarifa;
 
+import org.foobarspam.cotxox.carrera.Carrera;
+
 public class Tarifa {
         private static double costeMilla = 1.35;
         private static double costeMinuto = 0.35;
@@ -17,8 +19,8 @@ public class Tarifa {
 
         //Recordamos que hay que poner la clase carrera pero para comprobar que la clase funciona ponemos distancia y tiempo.
 
-        public static double getCosteTotalEsperado(double distancia, int tiempo){
-            double total = getCosteDistancia(distancia) + getCosteTiempo(tiempo);
+        public static double getCosteTotalEsperado(Carrera carrera){
+            double total = getCosteDistancia(carrera.getDistancia()) + getCosteTiempo(carrera.getTiempoEsperado());
             double comision = total * porcentajeComision;
             if (total < costeMinimo){
                 return costeMinimo;

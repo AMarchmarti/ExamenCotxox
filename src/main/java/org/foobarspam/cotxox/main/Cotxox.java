@@ -1,10 +1,10 @@
 package org.foobarspam.cotxox.main;
-/*
+
 import java.util.ArrayList;
 
 import org.foobarspam.cotxox.carrera.Carrera;
-import org.foobarspam.cotxox.conductores.Conductor;
-import org.foobarspam.cotxox.conductores.PoolConductores;
+//import org.foobarspam.cotxox.conductores.Conductor;
+//import org.foobarspam.cotxox.conductores.PoolConductores;
 
 public class Cotxox {
 
@@ -15,7 +15,7 @@ public class Cotxox {
          * y de la Carrera.
          *
          */
-/*
+
         String tarjetaCredito = "4916119711304546";
         String origen = "Aeroport Son Sant Joan";
         String destino = "Magaluf";
@@ -43,7 +43,7 @@ public class Cotxox {
         System.out.println("Distance: " + carrera.getDistancia());
         System.out.println("Total: " + carrera.getCosteEsperado() + "€");
 
-        System.out.println("\n#####" + "\t Get a ride: Driver: \t" + "#####\n");
+        System.out.println("\n#####" + "\t Get a ride: Driver: \t" + "#####\n");}
 
         /* Necesitamos crear la flota de conductores de donde seleccionar uno
          * para ofrecer el servicio.
@@ -117,5 +117,5 @@ public class Cotxox {
 
         System.out.println("Driver: " + carrera.getConductor().getNombre());
         System.out.println("Stars: " + carrera.getConductor().getValoracion());
-    }
-}*/
+    }*/
+}

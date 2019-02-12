@@ -1,5 +1,6 @@
 package org.foobarspam.cotxox;
 
+import org.foobarspam.cotxox.carrera.Carrera;
 import org.foobarspam.cotxox.tarifa.Tarifa;
 import org.junit.Assert;
 import org.junit.Test;
@@ -29,13 +30,13 @@ public class TarifaTest {
 
     @Test
     public void getTotal(){
+        String tarjeta = "4916119711304546";
         Tarifa tarifa = new Tarifa();
-        double distancia = 7.75;
-        int tiempo = 10;
+        Carrera carrera = new Carrera(tarjeta);
+        carrera.setDistancia(7.75);
+        carrera.setTiempoEsperado(10);
         double delta = 0.01;
-        double distanci = 2;
-        int temp = 5;
-        Assert.assertEquals(16.755, Tarifa.getCosteTotalEsperado(distancia,tiempo), delta);
-        Assert.assertEquals(5, Tarifa.getCosteTotalEsperado(distanci,temp), delta);
+        Assert.assertEquals(16.755, tarifa.getCosteTotalEsperado(carrera), delta);
+       // Assert.assertEquals(5, Tarifa.getCosteTotalEsperado(), delta);
     }
 }
